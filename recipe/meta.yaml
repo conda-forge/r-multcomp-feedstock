@@ -1,5 +1,4 @@
-{% set version = '1.4-6' %}
-
+{% set version = '1.4-8' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: multcomp_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/multcomp_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/multcomp/multcomp_{{ version }}.tar.gz
-  sha256: fe9efbe671416a49819cbdb9137cc218faebcd76e0f170fd1c8d3c84c42eeda2
+    - {{ cran_mirror }}/src/contrib/multcomp_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/multcomp/multcomp_{{ version }}.tar.gz
+  sha256: a20876619312310e9523d67e9090af501383ce49dc6113c6b4ca30f9c943a73a
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,6 +23,8 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-th.data >=1.0_2
     - r-codetools
@@ -39,7 +41,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('multcomp')"  # [not win]
+    - $R -e "library('multcomp')"           # [not win]
     - "\"%R%\" -e \"library('multcomp')\""  # [win]
 
 about:
@@ -50,8 +52,14 @@ about:
     models. The package includes demos reproducing analyzes presented in the book "Multiple
     Comparisons Using R" (Bretz, Hothorn,  Westfall, 2010, CRC Press).
   license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
