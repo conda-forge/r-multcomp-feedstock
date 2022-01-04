@@ -1,4 +1,4 @@
-{% set version = "1.4-17" %}
+{% set version = "1.4-18" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/multcomp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/multcomp/multcomp_{{ version }}.tar.gz
-  sha256: 41509d8457cfad9ce579115e6e0ed1f7c0244455a8639cbd38a6d755d338fb0b
+  sha256: 107a5e65cfff158b271d7386240dc8672d8cf45313f016e0ed83767faf7c2806
 
 build:
   merge_build_host: true  # [win]
