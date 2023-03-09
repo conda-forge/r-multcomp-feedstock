@@ -1,11 +1,11 @@
-About r-multcomp
-================
+About r-multcomp-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-multcomp-feedstock/blob/main/LICENSE.txt)
 
 Home: http://multcomp.R-forge.R-project.org The publishers web page is http://www.crcpress.com/product/isbn/9781584885740
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-multcomp-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simultaneous tests and confidence intervals for general linear hypotheses in parametric models, including  linear, generalized linear, linear mixed effects, and survival models. The package includes demos reproducing analyzes presented in the book "Multiple Comparisons Using R" (Bretz, Hothorn,  Westfall, 2010, CRC Press).
 
