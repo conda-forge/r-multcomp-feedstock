@@ -1,4 +1,4 @@
-{% set version = "1.4-30" %}
+{% set version = "1.4-31" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/multcomp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/multcomp/multcomp_{{ version }}.tar.gz
-  sha256: 4b24316f221784a8915a26e4b744d0299f1c4d3058c4c7e8faccc16333be495c
+  sha256: 752dc6e067d73581577e8e336ef309e976f42cab0ca4b8979cbb1414f7fc2a84
 
 build:
   number: 0
