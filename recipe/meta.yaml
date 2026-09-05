@@ -1,4 +1,4 @@
-{% set version = "1.4-31" %}
+{% set version = "1.4-32" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/multcomp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/multcomp/multcomp_{{ version }}.tar.gz
-  sha256: 752dc6e067d73581577e8e336ef309e976f42cab0ca4b8979cbb1414f7fc2a84
+  sha256: 8dd9ac037a04266c4c327d6d5dc16f3b7949a61f6cfd01c116778c8af26bcb17
 
 build:
   number: 0
@@ -42,7 +42,7 @@ test:
     - "\"%R%\" -e \"library('multcomp')\""  # [win]
 
 about:
-  home: http://multcomp.R-forge.R-project.org The publishers web page is http://www.crcpress.com/product/isbn/9781584885740
+  home: https://codeberg.org/thothorn/multcomp
   license: GPL-2.0-only
   summary: Simultaneous tests and confidence intervals for general linear hypotheses in parametric models, including  linear, generalized linear, linear mixed effects, and survival models. The package includes demos reproducing analyzes presented in the book "Multiple Comparisons Using R" (Bretz, Hothorn,  Westfall, 
     2010, CRC Press).
