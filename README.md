@@ -3,7 +3,7 @@ About r-multcomp-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-multcomp-feedstock/blob/main/LICENSE.txt)
 
-Home: http://multcomp.R-forge.R-project.org The publishers web page is http://www.crcpress.com/product/isbn/9781584885740
+Home: https://codeberg.org/thothorn/multcomp
 
 Package license: GPL-2.0-only
 
